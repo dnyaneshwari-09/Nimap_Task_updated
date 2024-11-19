@@ -1,0 +1,24 @@
+/* Background image container */
+.bg-image-container {
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+}
+
+/* Welcome section */
+.welcome-section {
+  margin-top: auto;
+  margin-bottom: auto;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Navbar overrides for better visibility */
+.navbar-dark .navbar-brand,
+.navbar-dark .nav-link {
+  color: rgba(255, 255, 255, 0.9);
+}
+.navbar-dark .nav-link:hover {
+  color: rgba(255, 255, 255, 1);
+}

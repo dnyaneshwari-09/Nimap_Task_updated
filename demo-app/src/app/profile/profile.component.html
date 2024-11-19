@@ -1,0 +1,61 @@
+<!-- Profile Section -->
+<div class="container profile-container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card shadow-lg rounded-lg">
+        <div class="card-header text-center bg-primary text-white">
+          <h3>User Profile <i class="fas fa-user-circle"></i></h3>
+        </div>
+        <div class="card-body">
+          <div class="row mb-4">
+            <!-- Profile Image -->
+            <div class="col-md-4 text-center">
+              <div class="profile-img-wrapper">
+                <img *ngIf="userProfile.photo" [src]="userProfile.photo" alt="User Photo" class="profile-img rounded-circle shadow-lg">
+                <div *ngIf="!userProfile.photo" class="no-photo-placeholder">
+                  <i class="fas fa-user-alt fa-5x text-muted"></i>
+                  <p class="mt-2 text-muted">No photo uploaded</p>
+                </div>
+              </div>
+            </div>
+            <!-- Profile Details -->
+            <div class="col-md-8">
+              <div class="profile-info">
+                <div class="mb-3">
+                  <i class="fas fa-user-circle"></i>
+                  <strong>First Name:</strong> {{ userProfile.firstName }}
+                </div>
+                <div class="mb-3">
+                  <i class="fas fa-birthday-cake"></i>
+                  <strong>Age:</strong> {{ userProfile.age }}
+                </div>
+                <div class="mb-3">
+                  <i class="fas fa-heart"></i>
+                  <strong>Interests:</strong>
+                  <div class="interests">
+                    <span *ngFor="let interest of userProfile.interests" class="badge bg-success mr-2">
+                      {{ interest }}
+                    </span>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <strong>Address:</strong> {{ userProfile.address1 }} {{ userProfile.address2 }}
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Edit Profile Button -->
+          <div class="text-center mt-4">
+            <button class="btn btn-warning btn-lg mr-3" (click)="editProfile()">
+              <i class="fas fa-edit"></i> Edit Profile
+            </button>
+            <button class="btn btn-info btn-lg" (click)="goBack()">
+              <i class="fas fa-arrow-left"></i> Back
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

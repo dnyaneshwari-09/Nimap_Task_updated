@@ -1,0 +1,14 @@
+{
+  "users": [
+    {
+      "id": "57bb",
+      "firstName": "nano",
+      "age": 24,
+      "interests": [],
+      "addressType": "Home",
+      "address1": "pune",
+      "address2": "pune",
+      "photo": null
+    }
+  ]
+}
